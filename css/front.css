@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  text-align: center;
+  font-family: "Graduate", cursive !important;
+}
+
+.banner {
+  width: 100%;
+}
+
+.front-images {
+  display: inline-block;
+}
+
+.front-images img {
+  border-width: 0.3vw !important;
+  border-style: solid !important;
+  border-color: #d5d5d5 !important;
+}
+
+#one, #three {
+  width: 33.5vw;
+}
+
+#two, #four {
+  width: 15.1vw;
+}
+
+.mission {
+  font-size: 5vmin;
+  color: red;
+  margin-top: 1vh;
+  text-shadow:
+    0 0 10px red,
+    0 0 20px red,
+    0 0 30px red,
+    0 0 40px #ee1111,
+    0 0 70px #ee1111,
+    0 0 80px #ee1111,
+    0 0 100px #ee1111;
+}
+
+.text {
+  font-size: 2.5vmin;
+  color: #eee;
+}
+
+a:link, a:hocer {
+  color: #eeeeee;
+  text-decoration: none;
+}
+
+.rinku:link {
+  color: #1111ee;
+}
+
+.rinku:hover {
+  text-decoration: none;
+}
+
+.left, .right {
+  width: 40%;
+  display: inline-block;
+}
+
+.footer.left {
+  text-align: left;
+}
+.footer.right {
+  text-align: right;
+}
+
+img.socmed {
+  width: 2vmin;
+  height: 2vmin;
+  display: inline-block;
+  margin-right: 1vmin;
+}
+
+p.socmed {
+  display: inline-block;
+}
+
+
+.logo {
+  width: 20vh;
+  position: relative;
+  top: calc(-5vh - 2.5vmin);
+}
+
+.enclosed {
+  border-width: 0vmin 1vmin 1vmin 1vmin;
+  padding-bottom: 5vmin;
+  border-style: solid;
+  border-color: #d5d5d5;
+}
