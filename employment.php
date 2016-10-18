@@ -9,6 +9,7 @@
             die();
         }
 
+        $position = $_POST["position"];
         $name = $_POST["name"];
         $email =  $_POST["email"];
         $instagram = $_POST["instagram"];
@@ -17,7 +18,6 @@
         $city =  $_POST["city"];
         $zip = $_POST["zip"];
         $refer = $_POST["refer"];
-        $position = $_POST["position"];
 
 
         $msg = "Full name: " . $name . "\r\n" .
@@ -67,7 +67,7 @@
     <div class="logo-container">
       <a href="index.html"><img class="logo" src="img/logo.png" /></a>
       <div class="link-container">
-        <a href="employment.html" class="header-link">Employment</a>
+        <a href="employment.php" class="header-link">Employment</a>
         <a href="contact.html" class="header-link">Contact</a>
       </div>
     </div>
@@ -91,7 +91,7 @@
           <li><a href="appointment.html">Appointments</a></li>
           <li><a href="about.html">About <span class="sr-only">(current)</span></a></li>
           <li><a href="events.html">Events</a></li>
-          <li class="mobile-only"><a href="employment.html">Employment</a></li>
+          <li class="mobile-only"><a href="employment.php">Employment</a></li>
           <li class="mobile-only"><a href="contact.html" >Contact</a></li>
           <!--li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -125,10 +125,15 @@
         <div class="p description">
           Tell us a little about yourself. Enter or select a response for each question below.
         </div>
-        <form class="interview">
+
+        <?php
+            if (empty($_POST)) {
+        ?>
+
+        <form method="post" action="" class="interview">
           <center>
             <label class="noselect position" for="position">Position</label><br>
-            <select name="state">
+            <select name="position">
                 <option selected value="Barber">Barber</option>
                 <option value="Stylist">Stylist</option>
                 <option value="Receptionist">Receptionist</option>
@@ -182,18 +187,17 @@
           </div>
           <center>
             <input type="submit" class="submit" value="Apply now">
-            <p class="thanks">Your form has been submitted! We'll get back to you shortly.</p>
-            <?php
-                } else {
-            ?>
-
-            <p class="thanks">Your form has been submitted! We'll get back to you shortly.</p>
-
-            <?php
-                }
-            ?>
           </center>
         </form>
+        <?php
+            } else {
+        ?>
+        <center>
+            <p class="thanks">Your form has been submitted! We'll get back to you shortly.</p>
+        </center>
+        <?php
+            }
+        ?>
     </div>
   </div>
 
