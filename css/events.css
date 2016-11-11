@@ -21,3 +21,12 @@ a{
   margin-left: 5%;
   margin-top: 2%;
 }
+.paypal{
+  width:100%;
+  font-size:2.5vh;
+}
+
+.paynow{
+  margin-top:10px;
+  height:5vh;
+}
